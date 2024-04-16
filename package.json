@@ -1,0 +1,16 @@
+{
+  "name": "playerbackendapp",
+  "version": "1.0.0",
+  "description": "creating an online mediaplayer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "backend"
+  ],
+  "author": "Sanjay Chandel",
+  "license": "ISC"
+}
