@@ -1,5 +1,7 @@
 import { v2 as cloudinary } from 'cloudinary';
 import fs from 'fs';
+// import extractPublicId from 'cloudinary-build-url'
+import { ApiError } from './ApiError.js';
           
 cloudinary.config({ 
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
@@ -24,5 +26,16 @@ const uploadOnCloudinary = async(localFilePath)=>{
         return null;
     }  
 }
+
+/*const deleteOldAvatarOnCloudinary = async(avatarUrl)=>{
+    
+    try {
+        const publicId  = await extractPublicId(avatarUrl)
+        await cloudinary.uploader.destroy(publicId);
+
+    } catch (error) {
+        throw new ApiError(400,"Old Avatar on Cloudinary deletion failed")
+    }
+} */
 
 export {uploadOnCloudinary};
